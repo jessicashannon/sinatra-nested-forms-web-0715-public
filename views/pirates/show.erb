@@ -1,7 +1,29 @@
-<h1>Display your Pirate here</h1>
+<h1>Pirate Page!</h1>
+<p>Name: <%= @pirate.params["pirate"]["name"]%></p>
+
+<p>Weight: <%= @pirate.params["pirate"]["weight"]%></p>
+
+<p>Height: <%= @pirate.params["pirate"]["height"]%></p>
+
+<h2>Ships 1:</h2>
+
+<p>Name<%= @pirate.params["pirate"]["ships"]["0"]["name"]%></p>
+
+<p>Type<%= @pirate.params["pirate"]["ships"]["0"]["type"]%></p>
+
+<p>Booty<%= @pirate.params["pirate"]["ships"]["0"]["booty"]%></p>
+
+<h2>Ships 1:</h2>
+
+<p>Name<%= @pirate.params["pirate"]["ships"]["1"]["name"]%></p>
+
+<p>Type<%= @pirate.params["pirate"]["ships"]["1"]["type"]%></p>
+
+<p>Booty<%= @pirate.params["pirate"]["ships"]["1"]["booty"]%></p>
 
 
-<h2>Display your first ship here</h2>
-
-
-<h2>Display your second ship here</h2>
+<!--
+{"pirate"=>
+      {"name"=>"", "weight"=>"", "height"=>"j", "ships"=>
+                                                    {"0"=>{"name"=>"j", "type"=>"j", "booty"=>"j"},
+                                                    "1"=>{"name"=>"h", "type"=>"hjj", "booty"=>""}}}} -->

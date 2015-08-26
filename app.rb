@@ -2,8 +2,25 @@ require './environment'
 
 module FormsLab
   class App < Sinatra::Base
+    attr_accessor :pirate
 
-    # code other routes/actions here
+  set :root, "#{settings.root}/."
+
+  get "/" do
+    erb :"pirates/index"
+  end
+
+  get "/new" do
+    erb :"pirates/new"
+  end
+
+  post "/pirates" do
+    @pirate = Pirate.new(params)
+
+    erb :"pirates/show"
+  end
+
+
 
   end
 end
